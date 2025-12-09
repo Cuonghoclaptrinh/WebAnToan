@@ -66,11 +66,15 @@ npm run dev
 
 Truy cập http://localhost:3000
 
+<img width="1440" height="837" alt="Screenshot 2025-12-09 at 10 01 56" src="https://github.com/Cuonghoclaptrinh/WebAnToan/blob/main/bikes_shop-viet/src/assets/homepage.png" />
+
 Đăng nhập bằng tài khoản test:
 
 Email: viet@gmail.com
 
 Mật khẩu: 12345678
+
+<img width="1440" height="837" alt="Screenshot 2025-12-09 at 10 01 56" src="https://github.com/Cuonghoclaptrinh/WebAnToan/blob/main/bikes_shop-viet/src/assets/login.png" />
 
 Chờ ~2 giây
 
@@ -78,11 +82,11 @@ Mở tab http://localhost:5173
 
 **🔥 Kết quả trước khi fix**
 
-Collector báo JWT Leak Detected!
++ Collector báo JWT Leak Detected!
 
-Thấy đầy đủ: token + email + mật khẩu
++ Thấy đầy đủ: token + email + mật khẩu
 
-Token bị lộ ngay lập tức
++ Token bị lộ ngay lập tức
 
 <img width="1440" height="837" alt="Screenshot 2025-12-09 at 10 01 56" src="https://github.com/Cuonghoclaptrinh/WebAnToan/blob/main/bikes_shop-viet/src/assets/beforeFix.png" />
 
@@ -94,11 +98,11 @@ Thêm vào file bikes_shop-viet/public/index.html trong <head>:
 
 **✔️ Kết quả sau khi fix**
 
-Không còn leak dữ liệu
++ Không còn leak dữ liệu
 
-Collector không nhận được bất kỳ token nào
++ Collector không nhận được bất kỳ token nào
 
-Demo bảo mật hoàn chỉnh
++ Demo bảo mật hoàn chỉnh
 
 <img width="1440" height="837" alt="Screenshot 2025-12-09 at 10 01 56" src="https://github.com/Cuonghoclaptrinh/WebAnToan/blob/main/bikes_shop-viet/src/assets/afterFix.png" />
 
