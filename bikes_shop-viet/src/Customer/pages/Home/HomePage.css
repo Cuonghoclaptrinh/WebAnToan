@@ -1,0 +1,415 @@
+/* Hero Section */
+.home-page {
+  position: relative;
+  top: 8rem;
+}
+.hero {
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+/* Nút chuyển trái/phải */
+.nav-button {
+  position: absolute;
+  top: 50%;                  
+  transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 100%;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button.left {
+  left: 20px;
+  border: none;
+}
+
+.nav-button.right {
+  right: 20px;
+  border: none;
+}
+
+/* Dots chỉ báo */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #fff;
+} 
+
+/* --- PRODUCTS --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-title {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.bike-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.bike-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.bike-image {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bike-image::after {
+  content: '🚴';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.bike-info {
+  padding: 1.5rem;
+}
+
+.bike-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.bike-description {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.bike-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #764ba2;
+  margin-bottom: 1rem;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buy-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* --- FEATURES --- */
+
+
+.home-features {
+  width: 100%;
+  background: radial-gradient(circle at top left, #eef2ff 0, #f9fafb 40%, #ffffff 100%);
+  padding: 5rem 0;
+  grid-template-columns: none !important;
+}
+
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features-headline {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 0.75rem;
+}
+
+.features-headline h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.features-subtitle {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+  border-color: rgba(99, 102, 241, 0.6);
+  background: radial-gradient(circle at top, #eef2ff 0, #ffffff 55%);
+}
+
+.feature-icon-wrap {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #fef3c7 0, #fee2e2 40%, #e0ecff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(148, 163, 184, 0.3);
+}
+
+.feature-icon {
+  font-size: 1.9rem;
+}
+
+.feature-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2933;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .features {
+    padding: 3.5rem 0;
+  }
+
+  .features-headline h2 {
+    font-size: 1.6rem;
+  }
+
+  .features-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+
+
+/* --- CART ICON --- */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* --- NOTIFICATION --- */
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideOut {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .bikes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- BRAND GRID FIX --- */
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  transition: transform 0.3s;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Khung chứa ảnh — CHỐT LẠI TỶ LỆ */
+.brand-image-wrap {
+  width: 160px;       /* cố định để tất cả bằng nhau */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* Ảnh logo */
+.brand-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* Không bị méo, luôn nằm trong khung */
+}
+
+/* Tên thương hiệu */
+.brand-name {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}

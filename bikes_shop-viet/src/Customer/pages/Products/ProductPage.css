@@ -1,0 +1,362 @@
+/* ===========================
+   PRODUCT PAGE WRAPPER
+=========================== */
+.product-page-container {
+  background: #f9fafb;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 8rem;
+}
+
+.product-content-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1300px;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
+
+/* ===========================
+   SIDEBAR FILTER
+=========================== */
+.sidebar.hide {
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar.show {
+  width: 250px;
+}
+
+.filter-box {
+  flex: 0 0 260px;
+  /* 👈 sidebar rộng ~260px */
+  max-width: 260px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: fit-content;
+  align-self: flex-start;
+  z-index: 5;
+}
+
+
+.filter-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-section {
+  margin-top: 1.5rem;
+}
+
+.filter-section h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.filter-section label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.filter-section input[type="radio"] {
+  margin-right: 8px;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.clear-btn {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clear-btn:hover {
+  background: #f3f4f6;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+.main-section {
+  flex: 1;
+  /* 👈 chiếm phần còn lại */
+  min-width: 0;
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+  top: 0;
+  /* cùng cao độ với filter-box, nằm dưới header */
+  z-index: 10;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+  margin-bottom: 1rem;
+  /* tạo khoảng cách rõ với grid bên dưới */
+}
+
+.sort-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-section select {
+  border: 1px solid #ddd;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* ===== Toolbar Pagination (compact) ===== */
+.toolbar-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-pagination .page-nav {
+  min-width: 26px;
+  min-height: 26px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toolbar-pagination .page-nav:hover:not(:disabled) {
+  background: #111827;
+  color: #fff;
+}
+
+.toolbar-pagination .page-nav:disabled {
+  opacity: 0.4;
+}
+
+.toolbar-page-info {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.toolbar-page-info strong {
+  font-weight: 700;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+}
+
+.no-result {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+/* ===========================
+   BOTTOM PAGINATION (PRO)
+=========================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.page-btn,
+.page-nav {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-width: 32px;
+  min-height: 32px;
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* Hover */
+.page-btn:hover,
+.page-nav:hover:not(:disabled) {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);
+}
+
+/* Active Page */
+.page-btn.active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+  font-weight: 600;
+}
+
+/* Disabled nav */
+.page-nav:disabled {
+  opacity: 0.4;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Ellipsis */
+.page-ellipsis {
+  padding: 0 4px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 768px) {
+  .product-page-container {
+    padding: 1rem;
+    padding-top: 7rem;
+    /* bớt cao hơn 1 xíu cho header */
+  }
+
+  .product-content-wrapper {
+    flex-direction: column;
+    /* sidebar lên trên */
+    gap: 1rem;
+    padding: 0;
+  }
+
+  /* Sidebar full width, không sticky nữa cho đỡ khó chịu */
+  .filter-box {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .toolbar {
+    position: static;
+    margin-top: 0.5rem;
+  }
+
+  /* Filter label chia 2 cột cho đỡ dài */
+  .filter-section {
+    margin-top: 1.2rem;
+  }
+
+  .filter-section label {
+    display: inline-flex;
+    align-items: center;
+    width: calc(50% - 8px);
+    /* 2 cột */
+    margin: 4px 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* 👈 đổi 2 → 3 */
+    gap: 12px;
+    /* có thể thu nhỏ gap cho đỡ chật */
+  }
+}
+
+/* MOBILE NHỎ */
+@media (max-width: 480px) {
+  .product-page-container {
+    padding: 0.75rem;
+    padding-top: 6.5rem;
+  }
+
+  .filter-box {
+    padding: 1rem;
+  }
+
+  .filter-title {
+    font-size: 1rem;
+  }
+
+  .filter-section h3 {
+    font-size: 0.95rem;
+  }
+
+  .filter-section label {
+    width: 100%;
+    /* 1 cột cho màn rất nhỏ */
+    font-size: 0.9rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    /* 1 cột */
+    gap: 16px;
+  }
+
+  .toolbar {
+    padding: 0.75rem;
+  }
+
+  .sort-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .sort-section select {
+    width: 100%;
+  }
+}
